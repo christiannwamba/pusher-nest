@@ -15,7 +15,6 @@ export class CommentService implements OnModuleInit {
         const channel = pusher.subscribe('comment');
         channel.bind('comment_data', data => {
             this.comments.push(data);
-            console.log(data);
         });
     }
 

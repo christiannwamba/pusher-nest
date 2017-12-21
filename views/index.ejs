@@ -28,19 +28,17 @@
     </nav>
     
     <div class="container">
-        <main>
+         <main>
             <div class="jumbotron">
                 <h3>Comments</h3>
                 <ul>
                     <% comments.forEach(function(comment) { %>
                         <li><%= comment.message %></li>
                         <% }); %>
-                    </ul>
-                </div>
-            </main>
-
-            <p id="sample"></p>
-            
+                </ul>
+            </div>
+         </main>
+                        
             <div class="row">
                 <div class="col-md-8">
                     <form method="post" action="/comments">
