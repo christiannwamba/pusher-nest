@@ -1,13 +1,13 @@
 ## Description
 
 Comment in realtime using nestjs
-## Installation
+## Installation Dependencies
 
 ```bash
 $ npm install
 ```
 
-## Start
+## Start the Application
 
 ```
 $ npm run start
