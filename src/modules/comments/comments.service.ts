@@ -1,22 +1,9 @@
-import {Component, OnModuleInit } from '@nestjs/common';
+import { Component } from '@nestjs/common';
 import { Comment } from './interface/comment';
 
 @Component()
-export class CommentService implements OnModuleInit {
+export class CommentService {
     private comments: Comment[] = []
-
-    onModuleInit() {
-        const Pusher = require('pusher-js');
-        let pusher = new Pusher('e6c6d225b2ca71968dcc', {
-            cluster: 'eu',
-            encrypted: true
-        });
-    
-        const channel = pusher.subscribe('comment');
-        channel.bind('comment_data', data => {
-            this.comments.push(data);
-        });
-    }
 
     create(comment: Comment) {
         const Pusher = require('pusher');
