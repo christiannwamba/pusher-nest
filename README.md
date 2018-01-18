@@ -1,7 +1,7 @@
 ## Description
 
 Comment in realtime using nestjs
-## Installation Dependencies
+## Install Dependencies
 
 ```bash
 $ npm install
