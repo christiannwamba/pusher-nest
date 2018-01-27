@@ -55,7 +55,7 @@
             <div class="col-md-8">
                 <form v-on:submit.prevent="submitComment()">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="message" v-model="comment.message" placeholder="Type your comments">
+                        <input type="text" class="form-control" autocomplete="off" name="message" v-model="comment.message" placeholder="Type your comments">
                     </div>
 
                     <div class="form-group">
@@ -91,7 +91,8 @@
                 submitComment() {
                     console.log(this.comment)
                     axios.post('/comments', this.comment).then((data) => {
-                        console.log(data)
+                        console.log(data);
+                        this.comment.message = '';
                     })
                 }
             }
